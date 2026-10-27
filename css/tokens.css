@@ -9,6 +9,7 @@
 
   --font: "Open Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
   --login-veil: linear-gradient(transparent, transparent);
+  --surface-veil: linear-gradient(rgba(250, 248, 247, .25), rgba(250, 248, 247, .25));
 
   color-scheme: light;
   --primary: var(--ubp-rojo);
@@ -86,4 +87,5 @@
   --shadow-pop: 0 0 2px rgba(0, 0, 0, .24), 0 8px 16px rgba(0, 0, 0, .28);
   --linkedin: #4ea1f3;
   --login-veil: linear-gradient(rgba(18, 16, 17, .66), rgba(18, 16, 17, .66));
+  --surface-veil: linear-gradient(rgba(31, 31, 31, .9), rgba(31, 31, 31, .9));
 }
