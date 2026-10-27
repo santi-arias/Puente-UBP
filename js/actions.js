@@ -3,9 +3,9 @@
 const LINKEDIN_RE = /^https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/in\/[\w\-%.]+\/?$/i;
 
 function draftFor(view) {
-  if (view === 'form') return { car: currentStudent().car, needs: [], ctx: '', disp: '', period: 1, fmt: 0, consent: false, attachCv: !!currentStudent().cv };
+  if (view === 'form') return { car: currentStudent().car, needs: [], ctx: '', period: 1, fmt: 0, consent: false, attachCv: !!currentStudent().cv };
   if (view === 'profile') return clone(profileTarget());
-  if (view === 'availability') return clone(currentMentor().avail);
+  if (view === 'availability') return clone(profileTarget().avail);
   return null;
 }
 
@@ -119,11 +119,13 @@ const ACTIONS = {
     const d = S.draft;
     if (!d.needs.length) return void (S.err = 'Elegí al menos una necesidad.');
     if (!d.ctx.trim()) return void (S.err = 'Contá brevemente tu situación.');
-    if (!d.consent) return void (S.err = 'Aceptá el uso de tus datos para enviar la solicitud.');
     const st = currentStudent();
+    if (!st.avail.bands.length) return void (S.err = 'Configurá tus franjas horarias en Agenda antes de enviar la solicitud.');
+    if (!d.consent) return void (S.err = 'Aceptá el uso de tus datos para enviar la solicitud.');
     const r = {
       id: S.nid++, alId: st.id, al: st.nombre, car: d.car, needs: [...d.needs],
-      ctx: d.ctx.trim(), disp: d.disp.trim() || 'A coordinar', period: d.period, fmt: d.fmt,
+      ctx: d.ctx.trim(), disp: `${availabilitySummary(st.avail)} · ${bandsSummary(st.avail).join(' · ')}`,
+      bands: [...st.avail.bands], period: d.period, fmt: d.fmt,
       st: 'pend', m: null, slot: null, ex: [], cv: d.attachCv ? fileRef(st.cv) : null,
     };
     autoMatch(r);
@@ -139,7 +141,7 @@ const ACTIONS = {
     const r = S.reqs.find(x => x.id === +b.dataset.id);
     const v = document.querySelector(`input[name=slot${r.id}]:checked`);
     r.st = 'conf';
-    r.slot = v ? v.value : nextSlots(mn(r.m))[0];
+    r.slot = v ? v.value : slotsFor(r, mn(r.m))[0];
     mn(r.m).us++;
     flash(`Mentoría confirmada con ${r.al}.`);
   },
@@ -153,8 +155,10 @@ const ACTIONS = {
     const m = currentMentor();
     m.on = m.on ? 0 : 1;
   },
+
+  // Disponibilidad (estudiante y egresado)
   'save-avail'() {
-    Object.assign(currentMentor().avail, S.draft);
+    Object.assign(profileTarget().avail, S.draft);
     go('home');
     flash('Disponibilidad guardada.');
   },
