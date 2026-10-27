@@ -1,7 +1,7 @@
 // Punto de entrada: enrutado de vistas, render y eventos.
 
 const VIEWS = {
-  est: { home: studentHome, form: requestForm, profile: studentProfile, support: supportView },
+  est: { home: studentHome, form: requestForm, availability: availabilityView, profile: studentProfile, support: supportView },
   egr: { home: graduateHome, profile: graduateProfile, availability: availabilityView, support: supportView },
   adm: { home: adminView, support: supportView },
 };
