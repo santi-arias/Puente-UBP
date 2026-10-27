@@ -5,6 +5,7 @@ const NAV = {
   est: [
     ['home', 'Inicio', 'Tus mentorías', 'home'],
     ['form', 'Solicitar', 'Nueva mentoría', 'add'],
+    ['availability', 'Agenda', 'Sesiones y horarios', 'calendar'],
     ['profile', 'Perfil', 'Datos, CV y LinkedIn', 'person'],
     ['support', 'Ayuda', 'Canal directo con la UBP', 'help'],
   ],
@@ -24,6 +25,7 @@ const INTROS = {
   'est.home': ['Inicio', 'Tus solicitudes de mentoría y su estado'],
   'est.form': ['Nueva mentoría', 'Contanos qué necesitás y te conectamos con el egresado que mejor coincida'],
   'est.profile': ['Mi perfil', 'Datos personales, CV y LinkedIn'],
+  'est.availability': ['Disponibilidad', 'Cantidad de sesiones y franjas horarias'],
   'egr.home': ['Inicio', 'Solicitudes recibidas y mentorías en curso'],
   'egr.profile': ['Mi perfil', 'Qué tipo de mentorías das y a qué carreras llegás'],
   'egr.availability': ['Disponibilidad', 'Cantidad de sesiones y franjas horarias'],
