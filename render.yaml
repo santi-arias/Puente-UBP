@@ -1,0 +1,11 @@
+# Despliegue en Render.com como sitio estático (sin paso de build).
+services:
+  - type: web
+    name: puente-ubp
+    runtime: static
+    buildCommand: echo "Sitio estático, sin build"
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff

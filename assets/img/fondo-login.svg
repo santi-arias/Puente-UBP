@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- Fondo del inicio de sesión: un puente que une estudiantes (izquierda) con egresados (derecha). -->
+  <defs>
+    <pattern id="peg" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="14" r="2.2" fill="#e2cdb3"/>
+    </pattern>
+    <radialGradient id="calm" cx="50%" cy="48%" r="42%">
+      <stop offset="0" stop-color="#f4ece2"/>
+      <stop offset=".65" stop-color="#f4ece2" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#f4ece2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Panel perforado en tono madera -->
+  <rect width="1600" height="1000" fill="#f4ece2"/>
+  <rect width="1600" height="1000" fill="url(#peg)"/>
+  <rect width="1600" height="1000" fill="url(#calm)"/>
+
+  <!-- Formas grandes -->
+  <circle cx="0" cy="0" r="330" fill="#a3223a"/>
+  <circle cx="0" cy="0" r="230" fill="#bd1e35"/>
+  <path d="M250 0a110 110 0 0 0 220 0z" fill="#e8b74a"/>
+  <circle cx="1600" cy="1000" r="260" fill="#d9b48a" opacity=".45"/>
+
+  <!-- Bloques de carreras (como el tótem de la foto) -->
+  <g transform="translate(1340 560)">
+    <rect x="-80" y="-150" width="160" height="150" rx="10" fill="#bd1e35"/>
+    <rect x="-80" y="-150" width="160" height="22" rx="10" fill="#d33a50"/>
+    <g transform="rotate(-5 0 -220)">
+      <rect x="-68" y="-285" width="136" height="132" rx="10" fill="#3651b5"/>
+      <rect x="-68" y="-285" width="136" height="20" rx="10" fill="#4a66cc"/>
+    </g>
+    <g transform="rotate(6 0 -345)">
+      <rect x="-56" y="-400" width="112" height="110" rx="10" fill="#3e9b5f"/>
+      <rect x="-56" y="-400" width="112" height="18" rx="10" fill="#52b073"/>
+    </g>
+    <g transform="rotate(-3 0 -440)">
+      <rect x="-36" y="-474" width="72" height="68" rx="8" fill="#fff" stroke="#bd1e35" stroke-width="5"/>
+    </g>
+  </g>
+
+  <!-- Confeti -->
+  <circle cx="230" cy="470" r="11" fill="#e8b74a"/>
+  <rect x="520" y="150" width="18" height="18" rx="3" fill="#3e9b5f" transform="rotate(20 529 159)"/>
+  <circle cx="1120" cy="120" r="9" fill="#3651b5"/>
+  <circle cx="1490" cy="110" r="22" fill="none" stroke="#bd1e35" stroke-width="6"/>
+  <rect x="120" y="610" width="16" height="16" rx="3" fill="#3651b5" transform="rotate(-15 128 618)"/>
+  <circle cx="1080" cy="320" r="7" fill="#e8b74a"/>
+  <path d="M440 330l14 24h-28z" fill="#bd1e35" opacity=".8"/>
+
+  <!-- Suelo -->
+  <path d="M0 905c260-30 520-30 800-12s560 22 800-8v115H0z" fill="#e6d3bc"/>
+
+  <!-- El puente -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M120 860Q800 380 1480 860" stroke="#bd1e35" stroke-width="16"/>
+    <path d="M256 774V860M392 706V860M528 658V860M1072 658V860M1208 706V860M1344 774V860" stroke="#bd1e35" stroke-width="7" opacity=".45"/>
+    <path d="M70 862H1530" stroke="#8f1525" stroke-width="12"/>
+    <path d="M150 870v40M1450 870v40" stroke="#8f1525" stroke-width="12"/>
+  </g>
+
+  <!-- Estudiantes -->
+  <g>
+    <circle cx="320" cy="776" r="16" fill="#292929"/>
+    <rect x="302" y="796" width="36" height="58" rx="18" fill="#3651b5"/>
+    <rect x="330" y="812" width="22" height="16" rx="3" fill="#e8b74a"/>
+    <circle cx="455" cy="784" r="14" fill="#292929"/>
+    <rect x="439" y="802" width="32" height="52" rx="16" fill="#3e9b5f"/>
+  </g>
+
+  <!-- Egresados -->
+  <g>
+    <circle cx="1140" cy="772" r="17" fill="#292929"/>
+    <path d="M1116 758l24-11 24 11-24 11z" fill="#292929"/>
+    <rect x="1121" y="793" width="38" height="61" rx="19" fill="#bd1e35"/>
+    <circle cx="1280" cy="776" r="16" fill="#292929"/>
+    <path d="M1257 762l23-10 23 10-23 10z" fill="#292929"/>
+    <rect x="1262" y="796" width="36" height="58" rx="18" fill="#8f1525"/>
+  </g>
+</svg>
