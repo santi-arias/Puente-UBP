@@ -10,7 +10,17 @@ function score(r, m) {
   if (r.car === m.car) s += 3;
   else if (m.alcance.includes(r.car)) s += 2;
   else if (AFFINITY[r.car] && AFFINITY[r.car] === AFFINITY[m.car]) s += 1;
+  if (sharedBands(r, m).length) s += 1;
   return s + r.needs.filter(n => m.t.includes(n)).length;
+}
+
+// Franjas en las que coinciden el estudiante (al pedir la mentoría) y el egresado.
+const sharedBands = (r, m) => (r.bands || []).filter(b => m.avail.bands.includes(b));
+
+// Horarios a proponer: primero los que coinciden con el estudiante; si no hay, los del egresado.
+function slotsFor(r, m) {
+  const shared = sharedBands(r, m);
+  return shared.length ? nextSlots({ avail: { bands: shared } }) : nextSlots(m);
 }
 
 function candidates(r) {
