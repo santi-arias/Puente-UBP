@@ -7,7 +7,7 @@ const FEATURES = {
 
 const STORAGE_KEY = 'puente-ubp:state';
 
-const CAREERS = ['Abogacía', 'Arquitectura', 'Comunicación Audiovisual', 'Contador Público', 'Diseño Gráfico', 'Diseño y Animación Digital', 'Gestión Ambiental', 'Gestión Empresarial', 'Ingeniería Informática', 'Licenciatura en Administración', 'Marketing', 'Publicidad', 'Relaciones Internacionales', 'Turismo'];
+const CAREERS = ['Abogacía', 'Arquitectura', 'Comunicación Audiovisual', 'Contador Público', 'Diseño Gráfico', 'Diseño y Animación Digital', 'Gestión Ambiental', 'Gestión Empresarial', 'Ingeniería Informática', 'Licenciatura en Administración', 'Marketing', 'Publicidad', 'Relaciones Internacionales', 'Turismo', 'Ingeniería en Telecomunicaciones'];
 
 // Necesidades del estudiante y, a la vez, tipos de mentoría que ofrece el egresado (se usan para el matching).
 const NEEDS = ['Orientación de carrera', 'Revisar mi CV', 'Simular una entrevista', 'Conocer el rubro', 'Buscar una práctica', 'Armar mi portfolio', 'Networking', 'Emprender un proyecto'];
