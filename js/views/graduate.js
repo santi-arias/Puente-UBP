@@ -1,9 +1,10 @@
 // Vistas del egresado: panel con solicitudes recibidas y mentorías confirmadas.
 
 function incomingCard(r, m) {
-  const slots = nextSlots(m);
+  const slots = slotsFor(r, m);
+  const shared = sharedBands(r, m).length > 0;
   const pick = slots.length
-    ? `<p class="muted">Elegí un horario dentro de tus franjas preferenciales para aceptar:</p>${slots.map((s, i) => `<label class="slot"><input type="radio" name="slot${r.id}" value="${s}" ${i === 0 ? 'checked' : ''}>${s}</label>`).join('')}`
+    ? `<p class="muted">${shared ? 'Estos horarios coinciden con tu disponibilidad y la del estudiante. Elegí uno para aceptar:' : 'No hay franjas en común con el estudiante. Elegí un horario dentro de las tuyas para aceptar:'}</p>${slots.map((s, i) => `<label class="slot"><input type="radio" name="slot${r.id}" value="${s}" ${i === 0 ? 'checked' : ''}>${s}</label>`).join('')}`
     : `<p class="muted">No tenés franjas horarias cargadas. <a href="#" data-a="go" data-v="availability">Configurá tu disponibilidad</a> para proponer horarios.</p>`;
   return requestCard(r, `${pick}<div class="row mt">${slots.length ? `<button class="btn" data-a="acc" data-id="${r.id}">Aceptar y confirmar</button>` : ''}<button class="btn secondary" data-a="dec" data-id="${r.id}">Ahora no puedo</button></div>`);
 }
