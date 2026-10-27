@@ -32,6 +32,12 @@
   color: var(--primary-text); font-size: 13px; font-weight: 600; box-shadow: var(--shadow);
 }
 
+@media (max-width: 600px) {
+  .login {
+    background: var(--login-veil), url("../assets/img/fondo-login-movil.svg") center bottom / cover no-repeat, var(--bg);
+    padding-bottom: 150px; /* deja ver el puente debajo de la tarjeta */
+  }
+}
 @media (max-width: 480px) {
   .login { padding-top: 64px; }
   .login-logo { width: 72px; height: 72px; margin-bottom: 16px; }
