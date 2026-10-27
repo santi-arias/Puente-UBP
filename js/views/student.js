@@ -33,7 +33,7 @@ function studentHome() {
 
 function requestForm() {
   const f = S.draft;
-  const cv = currentStudent().cv;
+  const { cv, avail } = currentStudent();
   return `<div class="card">
     <label class="field" for="car">Carrera</label>
     <select id="car" data-bind="car">${CAREERS.map(c => `<option ${c === f.car ? 'selected' : ''}>${c}</option>`).join('')}</select>
@@ -41,8 +41,10 @@ function requestForm() {
     ${chips('needs', NEEDS, f.needs)}
     <label class="field" for="ctx">Contexto</label>
     <textarea id="ctx" maxlength="400" data-bind="ctx" placeholder="Ej.: estoy buscando mi primera práctica y quiero revisar mi portfolio.">${esc(f.ctx)}</textarea>
-    <label class="field" for="disp">Tu disponibilidad</label>
-    <input id="disp" type="text" data-bind="disp" value="${esc(f.disp)}" placeholder="Ej.: martes y jueves por la tarde">
+    <label class="field">Tu disponibilidad</label>
+    <div class="summary-box" style="margin-top:0">${avail.bands.length
+      ? `<strong>${availabilitySummary(avail)}</strong><br>${bandsSummary(avail).join(' · ')}<br>`
+      : 'Todavía no cargaste tus franjas horarias. '}<a href="#" data-a="go" data-v="availability">${avail.bands.length ? 'Cambiar disponibilidad' : 'Configurar disponibilidad'}</a></div>
     <label class="field">Período de acompañamiento</label>
     ${chips('period', PERIODS, f.period, { values: PERIODS.map((_, i) => i + 1), multi: false })}
     <p class="hint">La primera sesión se coordina dentro de los próximos 10 días hábiles.</p>
