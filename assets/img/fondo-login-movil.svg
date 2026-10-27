@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 860" preserveAspectRatio="xMidYMax slice">
+  <!-- Versión vertical del fondo de inicio de sesión: el puente queda abajo, visible debajo de la tarjeta. -->
+  <defs>
+    <pattern id="peg" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="1.8" fill="#e2cdb3"/>
+    </pattern>
+  </defs>
+
+  <!-- Panel perforado en tono madera -->
+  <rect width="400" height="860" fill="#f4ece2"/>
+  <rect width="400" height="860" fill="url(#peg)"/>
+
+  <!-- Formas grandes -->
+  <circle cx="0" cy="0" r="150" fill="#a3223a"/>
+  <circle cx="0" cy="0" r="104" fill="#bd1e35"/>
+  <path d="M120 0a50 50 0 0 0 100 0z" fill="#e8b74a"/>
+
+  <!-- Bloques de carreras -->
+  <g transform="translate(350 222) scale(.9)">
+    <rect x="-30" y="-56" width="60" height="56" rx="6" fill="#bd1e35"/>
+    <rect x="-30" y="-56" width="60" height="9" rx="6" fill="#d33a50"/>
+    <g transform="rotate(-6 0 -82)">
+      <rect x="-25" y="-106" width="50" height="48" rx="6" fill="#3651b5"/>
+      <rect x="-25" y="-106" width="50" height="8" rx="6" fill="#4a66cc"/>
+    </g>
+    <g transform="rotate(7 0 -128)">
+      <rect x="-20" y="-148" width="40" height="40" rx="6" fill="#3e9b5f"/>
+      <rect x="-20" y="-148" width="40" height="7" rx="6" fill="#52b073"/>
+    </g>
+  </g>
+
+  <!-- Confeti -->
+  <circle cx="40" cy="250" r="6" fill="#e8b74a"/>
+  <rect x="250" y="95" width="10" height="10" rx="2" fill="#3e9b5f" transform="rotate(20 255 100)"/>
+  <circle cx="370" cy="300" r="5" fill="#3651b5"/>
+  <path d="M30 560l8 14H22z" fill="#bd1e35" opacity=".8"/>
+
+  <!-- Suelo -->
+  <path d="M0 830c70-10 140-12 200-6s130 10 200-2v38H0z" fill="#e6d3bc"/>
+
+  <!-- El puente -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M-10 800Q200 590 410 800" stroke="#bd1e35" stroke-width="9"/>
+    <path d="M53 746V800M116 712V800M284 712V800M347 746V800" stroke="#bd1e35" stroke-width="4" opacity=".45"/>
+    <path d="M-10 802H410" stroke="#8f1525" stroke-width="7"/>
+    <path d="M30 806v24M370 806v24" stroke="#8f1525" stroke-width="7"/>
+  </g>
+
+  <!-- Estudiantes -->
+  <circle cx="82" cy="752" r="10" fill="#292929"/>
+  <rect x="70" y="764" width="24" height="36" rx="12" fill="#3651b5"/>
+  <rect x="88" y="774" width="14" height="10" rx="2" fill="#e8b74a"/>
+  <circle cx="148" cy="756" r="9" fill="#292929"/>
+  <rect x="137" y="767" width="22" height="33" rx="11" fill="#3e9b5f"/>
+
+  <!-- Egresados -->
+  <circle cx="252" cy="752" r="10" fill="#292929"/>
+  <path d="M238 744l14-6.5 14 6.5-14 6.5z" fill="#292929"/>
+  <rect x="240" y="764" width="24" height="36" rx="12" fill="#bd1e35"/>
+  <circle cx="318" cy="754" r="9.5" fill="#292929"/>
+  <path d="M304.5 746l13.5-6 13.5 6-13.5 6z" fill="#292929"/>
+  <rect x="306.5" y="765" width="23" height="35" rx="11.5" fill="#8f1525"/>
+</svg>
