@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <!-- Fondo de la app: formas pastel y letras de la UBP. Se repite como mosaico; nada toca los bordes. -->
+  <g font-family="'Open Sans', 'Segoe UI', Arial, sans-serif" font-weight="800">
+    <!-- Letras -->
+    <text x="90" y="250" font-size="190" fill="#f6d3d9" transform="rotate(-12 150 190)">U</text>
+    <text x="640" y="200" font-size="150" fill="#d7e5fa" transform="rotate(9 690 150)">B</text>
+    <text x="960" y="720" font-size="210" fill="#d5eedd" transform="rotate(-8 1030 650)">P</text>
+    <text x="420" y="760" font-size="64" fill="#e4ddf6" letter-spacing="6" transform="rotate(-4 500 740)">UBP</text>
+    <text x="1010" y="230" font-size="80" fill="#fbe7c2" transform="rotate(14 1040 200)">U</text>
+    <text x="150" y="760" font-size="96" fill="#fbdccb" transform="rotate(10 190 720)">B</text>
+  </g>
+
+  <!-- Círculos y aros -->
+  <circle cx="420" cy="140" r="54" fill="#fbe7c2"/>
+  <circle cx="860" cy="430" r="80" fill="#f6d3d9" opacity=".8"/>
+  <circle cx="300" cy="470" r="26" fill="none" stroke="#d7e5fa" stroke-width="12"/>
+  <circle cx="1120" cy="420" r="20" fill="none" stroke="#f6d3d9" stroke-width="9"/>
+  <circle cx="700" cy="620" r="14" fill="#d5eedd"/>
+  <circle cx="560" cy="380" r="8" fill="#f2b8c2"/>
+
+  <!-- Cuadrados redondeados -->
+  <rect x="520" y="470" width="90" height="90" rx="18" fill="#d7e5fa" transform="rotate(15 565 515)"/>
+  <rect x="80" y="380" width="56" height="56" rx="12" fill="#e4ddf6" transform="rotate(-20 108 408)"/>
+  <rect x="860" y="90" width="40" height="40" rx="8" fill="#d5eedd" transform="rotate(30 880 110)"/>
+  <rect x="330" y="640" width="34" height="34" rx="7" fill="#fbe7c2" transform="rotate(12 347 657)"/>
+
+  <!-- Triángulos -->
+  <path d="M1040 520l46 80h-92z" fill="#fbdccb" transform="rotate(-10 1040 570)"/>
+  <path d="M250 90l30 52h-60z" fill="#d5eedd"/>
+  <path d="M760 800l26 44h-52z" fill="#e4ddf6" transform="rotate(18 760 825)"/>
+
+  <!-- Medias lunas -->
+  <path d="M640 330a60 60 0 0 1 120 0z" fill="#e4ddf6"/>
+  <path d="M60 600a44 44 0 0 0 88 0z" fill="#d7e5fa"/>
+
+  <!-- Cruces -->
+  <path d="M480 300v34M463 317h34" stroke="#f2b8c2" stroke-width="8" stroke-linecap="round"/>
+  <path d="M960 330v26M947 343h26" stroke="#b9d3f5" stroke-width="7" stroke-linecap="round"/>
+  <path d="M210 330v22M199 341h22" stroke="#f5d48f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1110 820v24M1098 832h24" stroke="#bfe3cb" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Ondas -->
+  <path d="M760 250q20-18 40 0t40 0 40 0 40 0" fill="none" stroke="#fbdccb" stroke-width="8" stroke-linecap="round"/>
+  <path d="M240 840q16-14 32 0t32 0 32 0 32 0" fill="none" stroke="#d7e5fa" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Grillas de puntos -->
+  <g fill="#e4ddf6">
+    <circle cx="560" cy="60" r="5"/><circle cx="582" cy="60" r="5"/><circle cx="604" cy="60" r="5"/>
+    <circle cx="560" cy="82" r="5"/><circle cx="582" cy="82" r="5"/><circle cx="604" cy="82" r="5"/>
+  </g>
+  <g fill="#fbdccb">
+    <circle cx="420" cy="560" r="5"/><circle cx="442" cy="560" r="5"/><circle cx="464" cy="560" r="5"/>
+    <circle cx="420" cy="582" r="5"/><circle cx="442" cy="582" r="5"/><circle cx="464" cy="582" r="5"/>
+    <circle cx="420" cy="604" r="5"/><circle cx="442" cy="604" r="5"/><circle cx="464" cy="604" r="5"/>
+  </g>
+</svg>
