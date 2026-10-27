@@ -87,5 +87,5 @@
   --shadow-pop: 0 0 2px rgba(0, 0, 0, .24), 0 8px 16px rgba(0, 0, 0, .28);
   --linkedin: #4ea1f3;
   --login-veil: linear-gradient(rgba(18, 16, 17, .66), rgba(18, 16, 17, .66));
-  --surface-veil: linear-gradient(rgba(32, 32, 32, .7), rgba(32, 32, 32, .8));
+  --surface-veil: linear-gradient(rgba(34, 34, 34, .8), rgba(34, 34, 34, .8));
 }
